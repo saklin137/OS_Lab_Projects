@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Selection Sort</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Selection Sort</h1><br/><p>Arr=(15 2 3 24)</p><p>length=${#Arr[@]}</p><p>echo &quot;Before Sorting Array element are : ${Arr[@]}&quot;</p><p>#Selection Sort Algorithm</p><p>for((i=0;i&lt;length-1;i++))</p><p>do</p><p>        minimumIndex=$i</p><p>        for((j=i+1;j&lt;length;j++))</p><p>        do</p><p>                if [ ${Arr[j]}  -lt  ${Arr[minimumIndex]}   ]</p><p>                then</p><p>                        minimumIndex=$j</p><p>                fi</p><p>        done</p><p>        temp=${Arr[$i]}</p><p>        Arr[$i]=${Arr[minimumIndex]}</p><p>        Arr[$minimumIndex]=$temp</p><p>done</p><p>echo &quot;After sorting your Array is ${Arr[@]}&quot;</p></div>
+</body>
+</html>

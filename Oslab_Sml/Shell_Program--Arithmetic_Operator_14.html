@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Arithmetic Operator</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Arithmetic Operator</h1><br/><p><h1> </h1><strong><h1>Arithmetic operator</h1></strong></p><p> add  -<strong>    +</strong></p><p> sub   -<strong>    -</strong></p><p> multiplication     -<strong>      \*</strong></p><p> div                - <strong>    /</strong></p><p> modulas     - <strong>    %</strong></p><p> Assignment   -    <strong>=</strong></p><p> </p><p> note : dont give any space before or after the assignment operator</p><p> </p><p> num1=36(correct)</p><p> num1 =36(error)</p><p> num1= 68(error)</p><p> num1 = 96(error)</p><p> </p><p> there is no specific datatype in shell programing for declaring any variables</p><p> </p><p> <strong>$</strong>   -&gt; it use to fetch the value of variable from the memory location</p><p> eg:</p><p> surya=25 </p><p> a=$surya</p><p> </p><p> <strong>expr</strong> - expression (it used to evaluate any expression)</p><p> </p><p> read b</p><p> c=36</p><p> a=`expr $b + 6 +$c`</p><p> a=`expr $b - 6`</p><p>a=`expr $b \* 6`</p><p>a=`expr $b / 6`</p><p>a=`expr $b % 6`</p><p></p><p>Another way of evaluating expression</p><p>a=$(($b + 4))</p><p>a=$(($b - 4))</p><p>a=$(($b * 4))</p><p>a=$(($b / 4))</p><p>a=$(($b % 4))</p><p></p><p>$((  $V +36 * 96    ))</p><p></p><p></p><p><strong><span style="text-decoration:underline;">How to calculate floating point number</span></strong></p><p></p><p><strong>1st way:</strong></p><p>eg:</p><p>b=35</p><p>c=3</p><p>temp=<strong>$(    echo “scale=4; $b / $c”  | bc -l       )</strong><strong></strong></p><p><strong></strong><strong></strong></p><p><strong></strong><strong><span style="text-decoration:underline;">2nd way:</span></strong><strong></strong></p><p><strong></strong>temp=<strong>`echo  “scale=3;$b / $c” | bc  -l`</strong><strong></strong></p><p><strong></strong></p><p>bc -&gt; basic calculator</p><p>l  -&gt; loading package like log,sin,cos.</p><p>scale -&gt; it use to take specific number of digit after radix point</p><p>eg: scale=3  if output=25.36523654 it shows 25.365</p><p></p><p></p></div>
+</body>
+</html>

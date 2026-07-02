@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>fork()</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>fork()</h1><br/><p><strong><h1>Fork() in C</h1></strong><ul><li>Fork system call is used for creating a new process, which is called child process,which runs concurrently with the process that makes the fork() call (parent process).</li></ul></p><p><ul><li>It takes no parameters and returns an integer value.</li><li>Below are different values returned by fork().</li></ul></p><p><strong>Negative Value:</strong> creation of a child process was unsuccessful.</p><p><strong>Zero:</strong> Returned to the newly created child process.</p><p><strong>Positive value:</strong> Returned to parent or caller. The value contains process ID of newly created child process.</p><p><ul><li>Total Number of Processes = 2^n</li></ul></p><p> where n is number of fork system calls. <ul><li> So when n=3, 2^3 = 8. So there are total eight processes (new child processes and one original</li></ul></p><p>process).<ul><li>In fork, more than two outputs are possible because the parent process and child process are</li></ul></p><p>running concurrently. So we don’t know whether the OS will first give control to the</p><p>parent process or the child process.</p><p><ul><li>Parent process and child process are running the same program, but it does not</li></ul></p><p>mean they are identical. OS allocate different data and states for these two</p><p>processes, and the control flow of these processes can be different.</p><p><ul><li>In fork, global variable change in one process does not affected two other processes</li></ul></p><p>because data/state of two processes are different. And also parent and child run</p><p>simultaneously so two outputs are possible.</p></div>
+</body>
+</html>

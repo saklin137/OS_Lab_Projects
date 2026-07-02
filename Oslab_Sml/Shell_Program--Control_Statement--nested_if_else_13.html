@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>nested if else</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>nested if else</h1><br/><p><span style="text-decoration:underline;">Syntax:</span></p><p></p><p> if [condition ]</p><p> then  </p><p>		  stm1</p><p>		  stm2</p><p>  		if [ condition ]</p><p>  		then</p><p>					   stm1</p><p>					   stm2</p><p>  		else</p><p>					   stm1</p><p>					   stm2</p><p>  		fi</p><p> else</p><p>  			stm1</p><p>  			stm2</p><p> fi</p><p> </p><p> </p><p> eg:</p><p></p><p>read b</p><p>if [ $(($b +2)) -eq 4 ]</p><p>then</p><p>				echo “hi”</p><p>				echo “hello”</p><p>				</p><p>				if [ $b -gt 4 ]</p><p>				then </p><p>						echo “how are you”</p><p>				else</p><p>						echo “welcome friends”</p><p>				fi</p><p>				</p><p>else</p><p>	echo “welcome all”</p><p>fi</p><p></p></div>
+</body>
+</html>

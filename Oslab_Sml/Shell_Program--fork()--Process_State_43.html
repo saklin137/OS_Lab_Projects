@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Process State</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Process State</h1><br/><p>In Terminal type below command. <ul><li>ps – Displays the currently running processes in the current shell.</li><li>ps u – Shows detailed information about the user-owned processes (including user, CPU/memory usage, etc.)</li><li>ps au – Displays all processes for all users with detailed information.</li><li>ps aux – Shows all running processes regardless of the terminal, including those without a controlling terminal.</p><p></li></ul><img src="images/43-1.png" alt="images/43-1.png" /></p><p></p><p>USER – Owner of the process</p><p>PID – Process ID</p><p>%CPU – CPU usage percentage</p><p>%MEM – Memory usage percentage</p><p>VSZ – Virtual memory size in KB</p><p>RSS – Resident memory size in KB</p><p>TTY – Terminal associated with the process</p><p>STAT – Process state (e.g., sleeping, running, zombie)</p><p>START – Start time of the process</p><p>TIME – Total CPU time used by the process</p><p>COMMAND – Command that started the process</p><p></p><p><strong><span style="text-decoration:underline;">Meaning of Process STAT</span></strong></p><p>R	-&gt; Running or runnable (on CPU)</p><p>S	-&gt; Sleeping (waiting for an event)</p><p>D	-&gt; Uninterruptible sleep (usually I/O)</p><p>Z	-&gt; Zombie (terminated but not reaped)</p><p>T	-&gt; Stopped (by job control or debugger)</p><p>X	-&gt; Dead (should never be seen)</p><p>I	-&gt; Idle kernel thread (Linux 2.6+)</p></div>
+</body>
+</html>

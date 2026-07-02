@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>With Parameter with Return Type</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>With Parameter with Return Type</h1><br/><p><strong><h1>Function With Return type and With Parameter</h1></strong></p><p><strong><h4>Note : There is no return type in shell like C, java, etc but we can achieve return via below syntax</h4></strong></p><p></p><p><strong>functionName</strong><strong></strong></p><p><strong>{</strong><strong></strong></p><p><strong>	var=$1</strong><strong></strong></p><p><strong>	var=$2</strong><strong></strong></p><p><strong>	stm2</strong><strong></strong></p><p><strong>	stm3</strong><strong></strong></p><p><strong>	......</strong><strong></strong></p><p><strong>	.....</strong><strong></strong></p><p><strong>}</strong></p><p></p><p><strong>variableName=$(functionName  parameter1 parameter2)</strong></p><p></p><p>eg:</p><p></p><p>add()</p><p>{</p><p>a=$1</p><p>b=$2</p><p>sum=$(($a+$b))</p><p>echo “$sum”</p><p>}</p><p></p><p>result=$(add 5 6)</p><p>echo “$result” </p></div>
+</body>
+</html>
