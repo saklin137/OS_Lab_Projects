@@ -7,27 +7,35 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>LabSphere | Engineering Practical Learning Platform</title>
+    <title>BBIT Lab Portal | Engineering Practical Learning Platform</title>
 
-    <!-- Bootstrap -->
+    <meta name="description"
+          content="Access BBIT Lab Manuals, Programs, Notes, Assignments, Viva Questions and Practical Resources in one place.">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="keywords"
+          content="BBIT, Lab Portal, Engineering, CSE, Practical">
 
     <!-- Google Fonts -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
           crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet">
 
-    <!-- Font Awesome -->
+    <!-- Bootstrap -->
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
 
     <!-- AOS -->
 
@@ -37,582 +45,320 @@
     <!-- CSS -->
 
     <link rel="stylesheet"
-          href="css/style.css">
-
-    <link rel="stylesheet"
-          href="css/responsive.css">
-
-    <link rel="stylesheet"
-          href="css/animations.css">
+          href="style.css">
 
 </head>
 
 <body>
 
-    <!--======================
-        Animated Background
-    =======================-->
+<!-- ================================================= -->
+<!-- NAVBAR -->
+<!-- ================================================= -->
 
-    <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
+<nav class="navbar navbar-expand-lg fixed-top">
 
-    <!--======================
-        NAVBAR
-    =======================-->
+<div class="container">
 
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+<a class="navbar-brand"
+   href="#">
 
-        <div class="container">
+<i class="bi bi-mortarboard-fill"></i>
 
-            <a class="navbar-brand fw-bold"
-               href="#">
+<span>BBIT Lab Portal</span>
 
-                <i class="fa-solid fa-flask-vial me-2"></i>
+</a>
 
-                LabSphere
+<button class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbar">
 
-            </a>
+<span class="navbar-toggler-icon"></span>
 
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
+</button>
 
-                <span class="navbar-toggler-icon"></span>
+<div class="collapse navbar-collapse"
+     id="navbar">
 
-            </button>
+<ul class="navbar-nav mx-auto">
 
-            <div class="collapse navbar-collapse"
-                 id="navbarNav">
+<li class="nav-item">
+<a class="nav-link active"
+   href="#">Home</a>
+</li>
 
-                <ul class="navbar-nav mx-auto">
+<li class="nav-item">
+<a class="nav-link"
+   href="#labs">Labs</a>
+</li>
 
-                    <li class="nav-item">
+<li class="nav-item">
+<a class="nav-link"
+   href="#resources">Resources</a>
+</li>
 
-                        <a class="nav-link active"
-                           href="#">Home</a>
+<li class="nav-item">
+<a class="nav-link"
+   href="#about">About</a>
+</li>
 
-                    </li>
+<li class="nav-item">
+<a class="nav-link"
+   href="#contact">Contact</a>
+</li>
 
-                    <li class="nav-item">
+</ul>
 
-                        <a class="nav-link"
-                           href="#">Courses</a>
+<button class="theme-btn">
 
-                    </li>
+<i class="bi bi-moon-stars"></i>
 
-                    <li class="nav-item">
+</button>
 
-                        <a class="nav-link"
-                           href="#">Practical Labs</a>
+<a href="#labs"
+   class="btn btn-primary get-started">
 
-                    </li>
+Get Started
 
-                    <li class="nav-item">
+<i class="bi bi-arrow-right"></i>
 
-                        <a class="nav-link"
-                           href="#">Notes</a>
+</a>
 
-                    </li>
+</div>
 
-                    <li class="nav-item">
+</div>
 
-                        <a class="nav-link"
-                           href="#">About</a>
+</nav>
 
-                    </li>
+<!-- ================================================= -->
+<!-- HERO -->
+<!-- ================================================= -->
 
-                    <li class="nav-item">
+<section class="hero">
 
-                        <a class="nav-link"
-                           href="#">Contact</a>
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
+<div class="blob blob3"></div>
 
-                    </li>
+<div class="container">
 
-                </ul>
+<div class="row align-items-center min-vh-100">
 
-                <button class="btn btn-primary px-4 rounded-pill">
+<!-- LEFT -->
 
-                    Login
+<div class="col-lg-6"
+     data-aos="fade-right">
 
-                </button>
+<div class="hero-badge">
 
-            </div>
+<i class="bi bi-stars"></i>
 
-        </div>
+Engineering Practical Learning Platform
 
-    </nav>
+</div>
 
-    <!--======================
-        HERO SECTION
-    =======================-->
+<h1>
 
-    <section class="hero">
+One Portal for
 
-        <div class="container">
+<span>
 
-            <div class="row align-items-center min-vh-100">
+Every BBIT Practical
 
-                <!-- LEFT -->
+</span>
 
-                <div class="col-lg-6">
+</h1>
 
-                    <span class="badge bg-primary mb-3">
+<p>
 
-                        Engineering Practical Platform
+Access Lab Manuals,
 
-                    </span>
+Assignments,
 
-                    <h1 class="display-3 fw-bold mb-4">
+Experiment PDFs,
 
-                        BBIT Engineering Practical Labs
+Programs,
 
-                        <span class="gradient-text">
+Notes,
 
-                            Smarter
+Viva Questions,
 
-                        </span>
+Previous Year Papers,
 
-                    </h1>
+and Practical Resources
 
-                    <h3>
+from one beautiful platform.
 
-                        Learn
+</p>
 
-                        <span id="typing"></span>
+<div class="hero-buttons">
 
-                    </h3>
+<a href="#labs"
+   class="btn btn-primary btn-lg">
 
-                    <p class="lead my-4">
+Explore Labs
 
-                        Access complete laboratory practicals,
+<i class="bi bi-arrow-right"></i>
 
-                        theory, source code, viva questions,
+</a>
 
-                        assignments, quizzes and downloadable
+<a href="#resources"
+   class="btn btn-outline-primary btn-lg">
 
-                        notes—all in one place.
+View Resources
 
-                    </p>
+<i class="bi bi-folder2-open"></i>
 
-                    <div class="d-flex gap-3 mt-4">
+</a>
 
-                        <a href="#courses"
+</div>
 
-                           class="btn btn-primary btn-lg rounded-pill">
+</div>
 
-                            Start Learning
+<!-- RIGHT -->
 
-                        </a>
+<div class="col-lg-6"
+     data-aos="fade-left">
 
-                        <a href="#"
+<div class="hero-image">
 
-                           class="btn btn-outline-dark btn-lg rounded-pill">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200"
+     class="img-fluid"
+     alt="Students">
 
-                            Explore Labs
+<div class="floating-card card1">
 
-                        </a>
+<i class="bi bi-file-earmark-code"></i>
 
-                    </div>
+<span>
 
-                </div>
+Lab Materials
 
-                <!-- RIGHT -->
+</span>
 
-                <div class="col-lg-6 text-center">
+</div>
 
-                    <img src="images/hero.svg"
+<div class="floating-card card2">
 
-                         class="img-fluid hero-image"
+<i class="bi bi-journal-bookmark-fill"></i>
 
-                         alt="Engineering Learning">
+<span>
 
-                </div>
+Assignments
 
-            </div>
+</span>
 
-        </div>
+</div>
 
-        <!-- Scroll Down -->
+<div class="floating-card card3">
 
-        <div class="scroll-indicator">
+<i class="bi bi-play-circle-fill"></i>
 
-            <i class="fa-solid fa-angles-down"></i>
+<span>
 
-        </div>
+Practical Videos
 
-    </section>
-    <!-- ========================================
-        POPULAR LAB COURSES
-========================================= -->
+</span>
 
-<section id="courses" class="py-5">
+</div>
+
+<div class="floating-card card4">
+
+<i class="bi bi-file-earmark-pdf-fill"></i>
+
+<span>
+
+Notes & PDFs
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- STATS SECTION STARTS HERE -->
+<!-- (Continue in Part 2) -->
+<!-- ================================================= -->
+<!-- STATS SECTION -->
+<!-- ================================================= -->
+
+<section class="stats-section">
 
     <div class="container">
 
-        <div class="text-center mb-5">
+        <div class="stats-wrapper">
 
-            <span class="section-tag">
-                Popular Laboratory Courses
-            </span>
+            <div class="row text-center g-4">
 
-            <h2 class="section-title mt-3">
+                <div class="col-lg-3 col-md-6">
 
-                Learn Every Practical
-                <span class="gradient-text">
-                    Step by Step
-                </span>
+                    <div class="stat-card">
 
-            </h2>
+                        <div class="stat-icon purple">
+                            <i class="bi bi-beaker"></i>
+                        </div>
 
-            <p class="section-subtitle">
+                        <h2 class="counter" data-target="10">0</h2>
 
-                Interactive practicals, source codes,
-                viva questions, assignments and notes
-                for every engineering laboratory.
-
-            </p>
-
-        </div>
-
-        <div class="row g-4">
-
-            <!-- CARD -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="course-card">
-
-                    <div class="course-icon">
-
-                        <i class="fa-solid fa-microchip"></i>
+                        <p>Labs</p>
 
                     </div>
-
-                    <span class="difficulty beginner">
-
-                        Beginner
-
-                    </span>
-
-                    <h4>
-
-                        Operating System Lab
-
-                    </h4>
-
-                    <p>
-
-                        Learn process scheduling,
-                        synchronization,
-                        memory management,
-                        shell programming and Linux.
-
-                    </p>
-
-                    <div class="course-info">
-
-                        <span>
-
-                            <i class="fa-solid fa-flask"></i>
-
-                            18 Experiments
-
-                        </span>
-
-                    </div>
-
-                    <a href="os-lab.html"
-                       class="course-btn">
-
-                        Start Learning
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
 
                 </div>
 
-            </div>
+                <div class="col-lg-3 col-md-6">
 
-            <!-- CARD -->
+                    <div class="stat-card">
 
-            <div class="col-lg-4 col-md-6">
+                        <div class="stat-icon green">
+                            <i class="bi bi-folder2-open"></i>
+                        </div>
 
-                <div class="course-card">
+                        <h2 class="counter" data-target="500">0</h2>
 
-                    <div class="course-icon">
-
-                        <i class="fa-solid fa-network-wired"></i>
-
-                    </div>
-
-                    <span class="difficulty intermediate">
-
-                        Intermediate
-
-                    </span>
-
-                    <h4>
-
-                        Computer Networks Lab
-
-                    </h4>
-
-                    <p>
-
-                        TCP/IP, Socket Programming,
-                        CRC, Sliding Window,
-                        Networking Tools.
-
-                    </p>
-
-                    <div class="course-info">
-
-                        <span>
-
-                            <i class="fa-solid fa-flask"></i>
-
-                            20 Experiments
-
-                        </span>
+                        <p>Resources</p>
 
                     </div>
-
-                    <a href="cn-lab.html"
-                       class="course-btn">
-
-                        Start Learning
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
 
                 </div>
 
-            </div>
+                <div class="col-lg-3 col-md-6">
 
-            <!-- CARD -->
+                    <div class="stat-card">
 
-            <div class="col-lg-4 col-md-6">
+                        <div class="stat-icon orange">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
 
-                <div class="course-card">
+                        <h2 class="counter" data-target="1000">0</h2>
 
-                    <div class="course-icon">
-
-                        <i class="fa-solid fa-code"></i>
-
-                    </div>
-
-                    <span class="difficulty beginner">
-
-                        Beginner
-
-                    </span>
-
-                    <h4>
-
-                        DSA Lab
-
-                    </h4>
-
-                    <p>
-
-                        Arrays,
-                        Linked Lists,
-                        Trees,
-                        Graphs,
-                        Searching,
-                        Sorting.
-
-                    </p>
-
-                    <div class="course-info">
-
-                        <span>
-
-                            <i class="fa-solid fa-flask"></i>
-
-                            22 Experiments
-
-                        </span>
+                        <p>Students</p>
 
                     </div>
-
-                    <a href="dsa-lab.html"
-                       class="course-btn">
-
-                        Start Learning
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
 
                 </div>
 
-            </div>
+                <div class="col-lg-3 col-md-6">
 
-            <!-- CARD -->
+                    <div class="stat-card">
 
-            <div class="col-lg-4 col-md-6">
+                        <div class="stat-icon blue">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
 
-                <div class="course-card">
+                        <h2>24/7</h2>
 
-                    <div class="course-icon">
-
-                        <i class="fa-solid fa-database"></i>
-
-                    </div>
-
-                    <span class="difficulty beginner">
-
-                        Beginner
-
-                    </span>
-
-                    <h4>
-
-                        DBMS Lab
-
-                    </h4>
-
-                    <p>
-
-                        SQL,
-                        PL/SQL,
-                        Normalization,
-                        Transactions,
-                        Joins.
-
-                    </p>
-
-                    <div class="course-info">
-
-                        <span>
-
-                            16 Experiments
-
-                        </span>
+                        <p>Access</p>
 
                     </div>
-
-                    <a href="dbms-lab.html"
-                       class="course-btn">
-
-                        Start Learning
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="course-card">
-
-                    <div class="course-icon">
-
-                        <i class="fa-brands fa-java"></i>
-
-                    </div>
-
-                    <span class="difficulty intermediate">
-
-                        Intermediate
-
-                    </span>
-
-                    <h4>
-
-                        Java Programming Lab
-
-                    </h4>
-
-                    <p>
-
-                        OOP,
-                        Swing,
-                        JDBC,
-                        Multithreading,
-                        Collections.
-
-                    </p>
-
-                    <div class="course-info">
-
-                        <span>
-
-                            19 Experiments
-
-                        </span>
-
-                    </div>
-
-                    <a href="java-lab.html"
-                       class="course-btn">
-
-                        Start Learning
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-
-            <div class="col-lg-4 col-md-6">
-
-                <div class="course-card">
-
-                    <div class="course-icon">
-
-                        <i class="fa-brands fa-python"></i>
-
-                    </div>
-
-                    <span class="difficulty beginner">
-
-                        Beginner
-
-                    </span>
-
-                    <h4>
-
-                        Python Programming Lab
-
-                    </h4>
-
-                    <p>
-
-                        Python Basics,
-                        NumPy,
-                        File Handling,
-                        OOP,
-                        GUI.
-
-                    </p>
-
-                    <div class="course-info">
-
-                        <span>
-
-                            17 Experiments
-
-                        </span>
-
-                    </div>
-
-                    <a href="python-lab.html"
-                       class="course-btn">
-
-                        Start Learning
-
-                    </a>
 
                 </div>
 
@@ -624,29 +370,1211 @@
 
 </section>
 
-    <!-- Bootstrap -->
+<!-- ================================================= -->
+<!-- LAB SECTION -->
+<!-- ================================================= -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<section id="labs" class="labs-section">
 
-    <!-- GSAP -->
+<div class="container">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<div class="section-title text-center">
 
-    <!-- Typed JS -->
+<span>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+EXPLORE LABS
 
-    <!-- AOS -->
+</span>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<h2>
 
-    <!-- JS -->
+Choose Your Subject
 
-    <script src="js/main.js"></script>
+</h2>
 
-    <script src="js/animations.js"></script>
+<p>
 
-    <script src="js/counter.js"></script>
+Access all practical materials organized subject-wise.
+
+</p>
+
+</div>
+
+<!-- SEARCH -->
+
+<div class="row justify-content-center mb-5">
+
+<div class="col-lg-7">
+
+<div class="search-box">
+
+<i class="bi bi-search"></i>
+
+<input
+type="text"
+placeholder="Search your laboratory subject...">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- LAB GRID -->
+
+<div class="row g-4">
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon blue">
+
+<i class="bi bi-globe"></i>
+
+</div>
+
+<h4>
+
+Web Technology
+
+</h4>
+
+<p>
+
+HTML, CSS, JavaScript,
+Bootstrap, PHP
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon cyan">
+
+<i class="bi bi-diagram-3"></i>
+
+</div>
+
+<h4>
+
+Computer Networks
+
+</h4>
+
+<p>
+
+OSI Model,
+TCP/IP,
+Socket Programming
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon indigo">
+
+<i class="bi bi-cpu"></i>
+
+</div>
+
+<h4>
+
+Operating System
+
+</h4>
+
+<p>
+
+Linux,
+Shell,
+Process,
+Semaphore
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon orange">
+
+<i class="bi bi-database"></i>
+
+</div>
+
+<h4>
+
+DBMS
+
+</h4>
+
+<p>
+
+SQL,
+Normalization,
+Joins,
+PL/SQL
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon red">
+
+<i class="bi bi-cup-hot"></i>
+
+</div>
+
+<h4>
+
+Java
+
+</h4>
+
+<p>
+
+Core Java,
+OOP,
+Collections,
+GUI
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon yellow">
+
+<i class="bi bi-filetype-py"></i>
+
+</div>
+
+<h4>
+
+Python
+
+</h4>
+
+<p>
+
+NumPy,
+Pandas,
+Programming,
+Files
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon green">
+
+<i class="bi bi-code-square"></i>
+
+</div>
+
+<h4>
+
+Software Engineering
+
+</h4>
+
+<p>
+
+UML,
+SDLC,
+Testing,
+Design
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="lab-card">
+
+<div class="card-icon purple">
+
+<i class="bi bi-robot"></i>
+
+</div>
+
+<h4>
+
+Machine Learning
+
+</h4>
+
+<p>
+
+Regression,
+Classification,
+Models
+
+</p>
+
+<a href="#">
+
+Explore
+
+<i class="bi bi-arrow-right-circle"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BUTTON -->
+
+<div class="text-center mt-5">
+
+<a
+href="#"
+class="btn btn-primary btn-lg">
+
+View All Laboratories
+
+<i class="bi bi-arrow-right"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- NEXT PART STARTS -->
+<!-- Premium Features -->
+ <!-- ================================================= -->
+<!-- WHY CHOOSE BBIT LAB PORTAL -->
+<!-- ================================================= -->
+
+<section class="features-section" id="about">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span>WHY CHOOSE US</span>
+
+            <h2>
+                Everything You Need
+                <br>
+                In One Platform
+            </h2>
+
+            <p>
+                Designed specially for BBIT students to simplify practical learning.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon bg-primary">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                    </div>
+
+                    <h4>Instant Access</h4>
+
+                    <p>
+                        Open any experiment, assignment or note within seconds.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon bg-success">
+                        <i class="bi bi-folder-check"></i>
+                    </div>
+
+                    <h4>Well Organized</h4>
+
+                    <p>
+                        Every lab is arranged semester-wise and experiment-wise.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon bg-warning">
+                        <i class="bi bi-phone"></i>
+                    </div>
+
+                    <h4>Works Everywhere</h4>
+
+                    <p>
+                        Desktop, Tablet and Mobile — fully responsive.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon bg-danger">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h4>Fast Search</h4>
+
+                    <p>
+                        Find your lab manuals, notes and assignments instantly.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon bg-info">
+                        <i class="bi bi-cloud-arrow-down"></i>
+                    </div>
+
+                    <h4>Easy Downloads</h4>
+
+                    <p>
+                        Download PDFs, source codes and practical files with one click.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon bg-dark">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+
+                    <h4>Regular Updates</h4>
+
+                    <p>
+                        New practicals, assignments and resources added regularly.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- FEATURED RESOURCES -->
+<!-- ================================================= -->
+
+<section class="resources-section" id="resources">
+
+<div class="container">
+
+<div class="section-title text-center">
+
+<span>
+
+FEATURED RESOURCES
+
+</span>
+
+<h2>
+
+Everything Required
+For Practical Learning
+
+</h2>
+
+<p>
+
+Access every important study material from one place.
+
+</p>
+
+</div>
+
+<div class="row g-4 mt-4">
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-journal-richtext"></i>
+
+<h5>Lab Manuals</h5>
+
+<p>
+
+Complete experiment manuals.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-code-slash"></i>
+
+<h5>Programs</h5>
+
+<p>
+
+Ready-to-run practical codes.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-file-earmark-text"></i>
+
+<h5>Assignments</h5>
+
+<p>
+
+Semester-wise assignments.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-question-circle"></i>
+
+<h5>Viva Questions</h5>
+
+<p>
+
+Important viva preparation.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-journal-bookmark-fill"></i>
+
+<h5>Notes</h5>
+
+<p>
+
+Teacher notes and handwritten notes.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-camera-video-fill"></i>
+
+<h5>Practical Videos</h5>
+
+<p>
+
+Watch every experiment visually.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-file-earmark-pdf-fill"></i>
+
+<h5>Previous Year Papers</h5>
+
+<p>
+
+University practical questions.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3 col-md-6">
+
+<div class="resource-card">
+
+<i class="bi bi-award-fill"></i>
+
+<h5>MCQ Practice</h5>
+
+<p>
+
+Practice before practical exams.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- HOW IT WORKS -->
+<!-- ================================================= -->
+
+<section class="timeline-section">
+
+<div class="container">
+
+<div class="section-title text-center">
+
+<span>HOW IT WORKS</span>
+
+<h2>
+
+Learning Made Simple
+
+</h2>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-circle">1</div>
+
+<h5>Select Your Lab</h5>
+
+<p>Choose your desired laboratory subject.</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">2</div>
+
+<h5>Open Experiment</h5>
+
+<p>Browse all practical experiments.</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">3</div>
+
+<h5>Download Resources</h5>
+
+<p>Get notes, programs and PDFs instantly.</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="timeline-circle">4</div>
+
+<h5>Practice & Learn</h5>
+
+<p>Complete experiments with confidence.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- LATEST ANNOUNCEMENTS -->
+<!-- ================================================= -->
+
+<section class="announcement-section">
+
+<div class="container">
+
+<div class="announcement-box">
+
+<div>
+
+<h3>
+
+📢 Latest Updates
+
+</h3>
+
+<p>
+
+• New Web Technology Lab uploaded
+
+<br>
+
+• Computer Networks Viva Questions added
+
+<br>
+
+• DBMS Assignment Set-2 available
+
+</p>
+
+</div>
+
+<a href="#" class="btn btn-primary">
+
+View All
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- PART 4 STARTS HERE -->
+<!-- Testimonials • FAQ • CTA • Footer -->
+ <!-- ================================================= -->
+<!-- STUDENT TESTIMONIALS -->
+<!-- ================================================= -->
+
+<section class="testimonial-section">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span>TESTIMONIALS</span>
+
+            <h2>What BBIT Students Say</h2>
+
+            <p>
+                Helping students learn practical subjects more efficiently.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-4">
+
+                <div class="testimonial-card">
+
+                    <img src="https://i.pravatar.cc/100?img=15" alt="Student">
+
+                    <h5>Rahul Das</h5>
+
+                    <small>CSE • 3rd Year</small>
+
+                    <p class="mt-3">
+                        This portal saved me before every practical exam.
+                        Everything is organized perfectly.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="testimonial-card">
+
+                    <img src="https://i.pravatar.cc/100?img=22" alt="Student">
+
+                    <h5>Priya Roy</h5>
+
+                    <small>IT • 2nd Year</small>
+
+                    <p class="mt-3">
+                        Notes, viva questions and programs are available in
+                        one place. Very useful.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="testimonial-card">
+
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Student">
+
+                    <h5>Aniket Ghosh</h5>
+
+                    <small>CSE • Final Year</small>
+
+                    <p class="mt-3">
+                        Clean interface and very easy to use from mobile as
+                        well.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- FAQ -->
+<!-- ================================================= -->
+
+<section class="faq-section">
+
+<div class="container">
+
+<div class="section-title text-center">
+
+<span>FAQ</span>
+
+<h2>Frequently Asked Questions</h2>
+
+</div>
+
+<div class="accordion mt-5" id="faqAccordion">
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#faq1">
+
+How do I access lab materials?
+
+</button>
+
+</h2>
+
+<div id="faq1"
+class="accordion-collapse collapse show"
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Simply choose your laboratory from the Labs section
+and click Explore.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button collapsed"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#faq2">
+
+Do I need to create an account?
+
+</button>
+
+</h2>
+
+<div id="faq2"
+class="accordion-collapse collapse"
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+No. The portal is designed for quick and easy access.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button collapsed"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#faq3">
+
+Can I download PDFs?
+
+</button>
+
+</h2>
+
+<div id="faq3"
+class="accordion-collapse collapse"
+data-bs-parent="#faqAccordion">
+
+<div class="accordion-body">
+
+Yes. Lab manuals, notes and assignments can be
+downloaded.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- CALL TO ACTION -->
+<!-- ================================================= -->
+
+<section class="cta-section">
+
+<div class="container">
+
+<div class="cta-box text-center">
+
+<h2>
+
+Ready to Start Learning?
+
+</h2>
+
+<p>
+
+Everything required for your practical classes is only
+one click away.
+
+</p>
+
+<a href="#labs"
+class="btn btn-light btn-lg">
+
+Explore All Labs
+
+<i class="bi bi-arrow-right"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- FOOTER -->
+<!-- ================================================= -->
+
+<footer id="contact">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-4">
+
+<h3>
+
+<i class="bi bi-mortarboard-fill"></i>
+
+BBIT Lab Portal
+
+</h3>
+
+<p>
+
+Engineering Practical Learning Platform for BBIT Students.
+
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="bi bi-github"></i></a>
+
+<a href="#"><i class="bi bi-linkedin"></i></a>
+
+<a href="#"><i class="bi bi-envelope-fill"></i></a>
+
+<a href="#"><i class="bi bi-youtube"></i></a>
+
+</div>
+
+</div>
+
+<div class="col-lg-2">
+
+<h5>Quick Links</h5>
+
+<ul class="footer-links">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#labs">Labs</a></li>
+
+<li><a href="#resources">Resources</a></li>
+
+<li><a href="#about">About</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5>Resources</h5>
+
+<ul class="footer-links">
+
+<li><a href="#">Lab Manuals</a></li>
+
+<li><a href="#">Assignments</a></li>
+
+<li><a href="#">Notes</a></li>
+
+<li><a href="#">Programs</a></li>
+
+<li><a href="#">Previous Year Papers</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5>Contact</h5>
+
+<p>
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Budge Budge Institute of Technology
+
+</p>
+
+<p>
+
+<i class="bi bi-envelope-fill"></i>
+
+support@bbitlabportal.com
+
+</p>
+
+<p>
+
+<i class="bi bi-telephone-fill"></i>
+
++91 XXXXX XXXXX
+
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<div class="text-center pt-3">
+
+<p>
+
+© 2026 BBIT Lab Portal • Designed with ❤️ for BBIT Students
+
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- ================================================= -->
+<!-- JAVASCRIPT -->
+<!-- ================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:800,
+    once:true
+});
+</script>
+
+<script src="script.js"></script>
 
 </body>
 
