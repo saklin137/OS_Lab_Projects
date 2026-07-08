@@ -1,100 +1,254 @@
-right_arrow_heavy = '&#129090;'
-left_arrow_heavy = '&#129088;'
+/*=========================================================
+    LabSphere Documentation Script
+    Version 2.0
+=========================================================*/
 
+const frame = document.getElementById("page_frame");
 
-function changeFrame(file_path){
-	var iframe = document.getElementById("page_frame");
-	iframe.src = file_path;
-}
+/*==========================================
+      OPEN DEFAULT PAGE
+==========================================*/
 
-function toggleSubTree(element){
-	var nextSibling = element.parentElement.nextElementSibling;
-	if(nextSibling.tagName === 'UL'){
-		nextSibling.classList.toggle('hide');
-		if(element.textContent === '+'){
-			element.textContent = '-'
-		}else{
-			element.textContent = '+'
-		}
-	}
-}
+window.onload = function () {
 
-function expandAllSubtrees(element){
-	var subtrees = document.getElementsByClassName("subtree");
-	for(var i=0; i<subtrees.length; i++){
-		var subtree = subtrees[i];
-		subtree.classList.remove('hide');
-		subtree.previousElementSibling.firstChild.textContent = '-';
-	}
-}
+    if (frame && frame.getAttribute("src") === "") {
 
-function collapseAllSubtrees(element){
-	var subtrees = document.getElementsByClassName("subtree");
-	for(var i=0; i<subtrees.length; i++){
-		var subtree = subtrees[i];
-		subtree.classList.add('hide');
-		subtree.previousElementSibling.firstChild.textContent = '+';
-	}
-}
-function toggle_tree_panel() {
-	var tree = get_tree_panel();
-	var toggle_btn = document.getElementById('tree_panel_toggle_btn')
-	if (tree.style.display === 'none') {
-		tree.style.display = 'inline'
-		toggle_btn.innerHTML = left_arrow_heavy
-		toggle_btn.onmouseenter = null
-	} else {
-		tree.style.display = 'none'
-		toggle_btn.innerHTML = right_arrow_heavy
-		toggle_btn.onmouseenter = toggle_tree_panel
-	}
-}
+        frame.src = "Shell_Program_1.html";
 
-function get_tree() {
-	return document.getElementsByClassName("tree")[0]
-}
-function get_tree_panel() {
-	return document.getElementsByClassName("tree-panel")[0]
-}
+    }
 
+    initializeTree();
 
-window.onload = function() {
-	var show_page = window.location.hash.substr(1);
-	if (show_page !== '') {
-		changeFrame(show_page);
-	}
+};
 
-	// Unwrap the header
-	let tree = get_tree()
-	let para = tree.children[0]
+/*==========================================
+      CHANGE PAGE
+==========================================*/
 
-	let index_txt = para.children[0].innerHTML
-	let index_title = document.createElement("h1")
-	index_title.innerHTML = index_txt
-	index_title.id = 'index_header'
-	tree.insertBefore(index_title, tree.children[0])
+function changeFrame(page){
 
+    if(!frame) return;
 
-	// Remove unwrapped elements
-	para.removeChild(para.children[0])
+    frame.style.opacity = "0";
 
-	// Keybinds
-	document.onkeydown = handle_keypress
+    setTimeout(function(){
 
-	// Toggle tree panel button
-	let panels = document.getElementsByClassName("two-panels")[0]
-	let toggle_btn = document.createElement("button")
-	toggle_btn.onclick = toggle_tree_panel
-	toggle_btn.innerHTML = left_arrow_heavy
-	toggle_btn.id = 'tree_panel_toggle_btn'
-	panels.insertBefore(toggle_btn, panels.children[1])
+        frame.src = page;
+
+        highlightCurrent(page);
+
+    },150);
 
 }
 
-function handle_keypress(ev) {
-	switch(ev.key) {
-		case "Escape":
-			toggle_tree_panel()
-			break
-	}
+/*==========================================
+      AFTER PAGE LOAD
+==========================================*/
+
+frame.addEventListener("load",function(){
+
+    frame.style.opacity="1";
+
+});
+
+/*==========================================
+      INITIALIZE TREE
+==========================================*/
+
+function initializeTree(){
+
+    document.querySelectorAll(".subtree").forEach(function(tree){
+
+        tree.style.display="block";
+
+    });
+
+}
+
+/*==========================================
+      TOGGLE SUBTREE
+==========================================*/
+
+function toggleSubTree(button){
+
+    let subtree = button.parentElement.nextElementSibling;
+
+    if(!subtree) return;
+
+    if(subtree.style.display==="none"){
+
+        subtree.style.display="block";
+
+        button.innerHTML="-";
+
+    }
+
+    else{
+
+        subtree.style.display="none";
+
+        button.innerHTML="+";
+
+    }
+
+}
+
+/*==========================================
+      EXPAND ALL
+==========================================*/
+
+function expandAllSubtrees(){
+
+    document.querySelectorAll(".subtree").forEach(function(tree){
+
+        tree.style.display="block";
+
+    });
+
+    document.querySelectorAll("li>button").forEach(function(btn){
+
+        btn.innerHTML="-";
+
+    });
+
+}
+
+/*==========================================
+      COLLAPSE ALL
+==========================================*/
+
+function collapseAllSubtrees(){
+
+    document.querySelectorAll(".subtree").forEach(function(tree){
+
+        tree.style.display="none";
+
+    });
+
+    document.querySelectorAll("li>button").forEach(function(btn){
+
+        btn.innerHTML="+";
+
+    });
+
+}
+
+/*==========================================
+      ACTIVE LINK
+==========================================*/
+
+function highlightCurrent(page){
+
+    document.querySelectorAll(".tree a").forEach(function(link){
+
+        link.classList.remove("active");
+
+    });
+
+    document.querySelectorAll(".tree a").forEach(function(link){
+
+        let onclick = link.getAttribute("onclick");
+
+        if(onclick && onclick.includes(page)){
+
+            link.classList.add("active");
+
+            expandParents(link);
+
+        }
+
+    });
+
+}
+
+/*==========================================
+      EXPAND PARENT TREE
+==========================================*/
+
+function expandParents(link){
+
+    let current = link.parentElement;
+
+    while(current){
+
+        let previous = current.previousElementSibling;
+
+        if(previous && previous.tagName==="LI"){
+
+            let btn = previous.querySelector("button");
+
+            if(btn){
+
+                btn.innerHTML="-";
+
+            }
+
+        }
+
+        if(current.classList && current.classList.contains("subtree")){
+
+            current.style.display="block";
+
+        }
+
+        current = current.parentElement;
+
+    }
+
+}
+
+/*==========================================
+      KEYBOARD SHORTCUTS
+==========================================*/
+
+document.addEventListener("keydown",function(e){
+
+    if(e.ctrlKey && e.key==="ArrowRight"){
+
+        expandAllSubtrees();
+
+    }
+
+    if(e.ctrlKey && e.key==="ArrowLeft"){
+
+        collapseAllSubtrees();
+
+    }
+
+});
+
+/*==========================================
+      SMOOTH SIDEBAR SCROLL
+==========================================*/
+
+document.querySelectorAll(".tree a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        setTimeout(function(){
+
+            link.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"nearest"
+
+            });
+
+        },200);
+
+    });
+
+});
+
+/*==========================================
+      IFRAME TRANSITION
+==========================================*/
+
+if(frame){
+
+    frame.style.transition="opacity .25s ease";
+
+    frame.style.opacity="1";
+
 }

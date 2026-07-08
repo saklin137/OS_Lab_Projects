@@ -1,256 +1,472 @@
-/* Met Office external website
+/*=====================================================
+    LabSphere Documentation Theme v1
+    Designed for CherryTree Export
+    Author: ChatGPT
+======================================================*/
 
-Colours:
-- black/dark grey: #202A2C
-- dark grey: #666666
-- grey: #DDDDDD (thin lines)
-- light grey: #EEEEEE (background colour)
-- darkish green: #BCDB0C
-- green: #CCFF33
-- darkish blue: #4BA8BA
-- blue: #00ADD0
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-*/
+/*==============================
+        ROOT COLORS
+===============================*/
 
-/*******************************************************************************
- * GENERAL
- ******************************************************************************/
-/*<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700' rel='stylesheet' type='text/css'>*/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700);
+:root{
 
-body {
-    font-size: 13px;
-    font-family: "Open Sans", sans-serif !important;
-    white-space: pre-wrap;
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+
+    --sidebar:#ffffff;
+
+    --background:#f5f7fb;
+
+    --text:#1e293b;
+
+    --light:#64748b;
+
+    --border:#e2e8f0;
+
+    --hover:#eff6ff;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
 }
 
-button {
-    border: none;
-    padding: 0 5px;
-    background: none;
-    margin: 0;
+/*==============================
+        RESET
+===============================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
 }
 
-button:hover {
-    color: #666666;
+html{
+
+    scroll-behavior:smooth;
+
 }
 
-#index_header {
-    text-align: center;
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow:auto;
+
 }
 
-.two-panels {
-    background: #EEEEEE;
+/*==============================
+    MAIN LAYOUT
+===============================*/
+
+.two-panels{
+
+    display:flex;
+
+    width:100vw;
+
+    height:100vh;
+
 }
 
-div.two-panels {
-    height: inherit;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+/*==============================
+        SIDEBAR
+===============================*/
+
+.tree-panel{
+
+    width:320px;
+
+    min-width:320px;
+
+    background:var(--sidebar);
+
+    border-right:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
 }
 
-div.tree-panel {
-    flex: 19vw;
-    margin-left: 1vw;
-    height: 100%;
-    overflow: auto;
-    border-right: 3px solid;
+/* Scrollbar */
 
-    /*background-color: #EEEEEE;
-    border-top: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
-    margin-bottom: 20px;*/
-    /*margin: 0.75em 0 0.75em 20px;*/
+.tree-panel::-webkit-scrollbar{
+
+    width:8px;
+
 }
 
-div.page-panel {
-    flex: 80vw;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
+.tree-panel::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:20px;
+
 }
 
-div.page-panel iframe {
-    width: 100%;
-    border: 0px;
-    margin-top: 0px;
-    height: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
+.tree{
+
+    padding:25px;
+
 }
 
-div.page {
-    padding: 20px;
+/*==============================
+        TITLE
+===============================*/
+
+.tree strong{
+
+    display:block;
+
+    font-size:30px;
+
+    text-align:center;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
 }
 
-.clear {
-    clear: both
+/*==============================
+        BUTTONS
+===============================*/
+
+.tree button{
+
+    cursor:pointer;
+
+    border:none;
+
+    background:#eef2ff;
+
+    color:var(--primary);
+
+    padding:8px 14px;
+
+    border-radius:8px;
+
+    font-size:13px;
+
+    transition:.3s;
+
+    margin:3px;
+
 }
 
-/*******************************************************************************
- * TREE INDEX
- ******************************************************************************/
+.tree button:hover{
 
-div.tree {
-    font-size: 12px;
-    color: #666666;
+    background:var(--primary);
+
+    color:white;
+
 }
 
-/* fix for firefox */
-div.tree button {
-    border-width: 2px;
+/*==============================
+        LIST
+===============================*/
+
+.tree ul{
+
+    list-style:none;
+
+    margin-left:10px;
+
 }
 
-div.tree a, div.tree a:visited {
-    color: #666666;
-    text-decoration: none;
+.tree li{
+
+    margin:6px 0;
+
 }
 
-div.tree ul {
-    padding-inline-start: 20px;
-    list-style-type: none;
-    line-height: 0.3;
+/*==============================
+        LINKS
+===============================*/
+
+.tree a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    padding:7px 10px;
+
+    border-radius:8px;
+
+    transition:.25s;
+
+    font-size:15px;
+
 }
 
-div.tree ul.outermost {
-    padding-inline-start: 0;
+.tree a:hover{
+
+    background:var(--hover);
+
+    color:var(--primary);
+
+    transform:translateX(4px);
+
 }
 
-div.tree li {
-    padding-inline-start: 0;
-}
-div.tree li.leaf {
-    padding-inline-start: 10px;
-    line-height: 2;
-}
-.tree li a {
-    width: 100%;
-    display: inline-block;
-}
+/*==============================
+    SUBTREE
+===============================*/
 
-.tree li:hover {
-    background: rgba(193, 193, 193, 0.7);
-    color: white;
-}
-.tree li {
-    white-space: nowrap;
+.subtree{
+
+    margin-left:18px;
+
+    padding-left:12px;
+
+    border-left:2px solid #dbeafe;
+
 }
 
-div.tree a.show, div.tree a.hide { display: none; }
+/*==============================
+    LEAF
+===============================*/
 
-.hide {
-    display: none;
+.leaf a::before{
+
+    content:"📄 ";
+
 }
 
-/*******************************************************************************
- * NODE PAGES
- ******************************************************************************/
+/*==============================
+    PAGE PANEL
+===============================*/
 
-/* TABLES */
+.page-panel{
 
-table {
-    border: 1px solid #202A2C;
-    border-collapse: collapse;
+    flex:1;
+
+    background:#fff;
+
 }
 
-th {
-    background-color: rgb(193, 193, 193);
+#page_frame{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+    background:white;
+
 }
 
-td, th {
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid #202A2C;
-    text-align: center;
+/*==============================
+    TREE BUTTONS
+===============================*/
+
+li>button{
+
+    width:24px;
+
+    height:24px;
+
+    padding:0;
+
+    border-radius:50%;
+
+    font-size:13px;
+
+    font-weight:bold;
+
 }
 
-/* HEADINGS */
+/*==============================
+        ACTIVE LINK
+===============================*/
 
-div.page h1 {
-    font-weight: bold;
-    display: inline;
+.tree a.active{
+
+    background:var(--primary);
+
+    color:white;
+
 }
 
-div.page h1.title {
-    text-align: center;
-    background: rgb(193, 193, 193);
-    margin: 0 auto 1vh auto;
-    width: 100%;
-    display: inline-block;
+/*==============================
+    HOVER EFFECT
+===============================*/
+
+.tree li:hover{
+
+    transition:.3s;
+
 }
 
-div.page h2 {
-    padding-top: 1em;
-    /*padding-bottom: 0.5em;*/
-    font-weight: bold;
-    font-size: 150%;
-    color: #666666;
-    display: inline;
+/*==============================
+        ANIMATION
+===============================*/
+
+.tree li{
+
+    animation:fadeIn .35s ease;
+
 }
 
-div.page h3 {
-    padding-top: 0.75em;
-    font-weight: bold;
-    font-size: 125%;
-    color: #666666;
-    display: inline;
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
 }
 
-/* LINKS */
+/*==============================
+    RESPONSIVE
+===============================*/
 
-/*div.page a, div.page a:visited {
-    color: #005BCA;
-    text-decoration: none;
+@media(max-width:900px){
+
+.tree-panel{
+
+    width:270px;
+
+    min-width:270px;
+
 }
 
-div.page a:hover, div#me a:hover {
-    text-decoration: underline;
-}*/
+.tree strong{
 
-/* CODE */
+    font-size:24px;
 
-span.code-node {
-    /*color: #FFFF00;  /* yellow */
 }
 
-div.page code, div.page pre {
-    font-family: "Courier New", Courier, monospace;
-    font-weight: normal;
-    font-size: 13px;
-    background-color: #EEEEEE;
-    border: 1px solid #202A2C;
+.tree a{
+
+    font-size:14px;
+
 }
 
-div .codebox {
-    display: inline-block;
-    padding: 5px 7px;
-    min-width: 30%;
 }
 
-div.page p.tagged-text,
-div.page code {
-    /*color: #859C00;*/
-    padding-left: 0.25em;
-    padding-right: 0.25em;
+@media(max-width:768px){
+
+.two-panels{
+
+    flex-direction:column;
+
 }
 
-div.page pre {
-    padding: 0.25em;
-    overflow: auto !important;
-    width: 75%;
+.tree-panel{
+
+    width:100%;
+
+    height:300px;
+
+    min-width:100%;
+
 }
 
+.page-panel{
 
-/* IMAGES */
+    height:calc(100vh - 300px);
 
-/*img {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}*/
+}
 
+}
+
+/*==============================
+    TABLES
+===============================*/
+
+table{
+
+    border-collapse:collapse;
+
+    width:100%;
+
+}
+
+table td,
+table th{
+
+    border:1px solid #ddd;
+
+    padding:10px;
+
+}
+
+table th{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+/*==============================
+        CODE
+===============================*/
+
+pre{
+
+    background:#0f172a;
+
+    color:#f8fafc;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    overflow:auto;
+
+}
+
+code{
+
+    font-family:Consolas, monospace;
+
+}
+
+/*==============================
+    IMAGES
+===============================*/
+
+img{
+
+    max-width:100%;
+
+    border-radius:10px;
+
+}
+
+/*==============================
+        SELECTION
+===============================*/
+
+::selection{
+
+    background:#2563eb;
+
+    color:white;
+
+}
